@@ -1,5 +1,6 @@
 import type { Preview, ReactRenderer } from '@storybook/react-vite'
 import { withThemeByClassName } from '@storybook/addon-themes'
+import { themes } from 'storybook/theming'
 
 import '../src/index.css'
 
@@ -17,6 +18,10 @@ const preview: Preview = {
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
       test: 'todo',
+    },
+
+    docs: {
+      theme: themes.dark,
     },
   },
   decorators: [
