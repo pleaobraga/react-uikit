@@ -1,5 +1,14 @@
 # React UI Kit (Based on Pretine 7)
 
+[![Node.js](https://img.shields.io/badge/node-22.18.0-blue?logo=node.js)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/react-19.1.0-61DAFB?logo=react)](https://reactjs.org/)
+[![TailwindCSS](https://img.shields.io/badge/tailwindcss-4.1.11-38B2AC?logo=tailwindcss)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/vite-7.0.4-646CFF?logo=vite)](https://vitejs.dev/)
+[![Storybook](https://img.shields.io/badge/storybook-9.1.0-FF4785?logo=storybook)](https://storybook.js.org/)
+[![Vitest](https://img.shields.io/badge/vitest-3.2.4-6E9F18?logo=vitest)](https://vitest.dev/)
+
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 This project is a **React-based UI Kit** inspired by and adapted from [Pretine 7](https://www.figma.com/community/file/1293978471602433537).  
 Pretine 7 was originally created to align with Mantine’s React architecture and provides a robust, themeable design system with light/dark mode support.
 
