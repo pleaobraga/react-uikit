@@ -92,5 +92,6 @@ export const buttonVariants = tv({
   defaultVariants: {
     variant: 'default',
     size: 'medium',
+    compact: false,
   },
 })
