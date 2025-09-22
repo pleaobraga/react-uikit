@@ -1,5 +1,6 @@
-import { cn } from '@/lib/utils'
 import { tv } from 'tailwind-variants'
+
+import { cn } from '@/lib/utils'
 
 export const buttonVariants = tv({
   base: cn(
@@ -23,75 +24,75 @@ export const buttonVariants = tv({
         'bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80',
       ghost:
         'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
-      link: 'text-primary underline-offset-4 hover:underline',
+      link: 'text-primary underline-offset-4 hover:underline'
     },
     size: {
       xs: 'text-xs py-0.25',
       sm: 'text-sm',
       medium: 'text-base',
       lg: 'text-lg',
-      xl: 'text-xl',
+      xl: 'text-xl'
     },
     compact: {
       true: '',
-      false: '',
-    },
+      false: ''
+    }
   },
   compoundVariants: [
     {
       size: 'xs',
       compact: true,
-      class: 'leading-5 px-2',
+      class: 'leading-5 px-2'
     },
     {
       size: 'xs',
       compact: false,
-      class: 'leading-7 px-3',
+      class: 'leading-7 px-3'
     },
     {
       size: 'sm',
       compact: true,
-      class: 'leading-6 py-0.25 px-2',
+      class: 'leading-6 py-0.25 px-2'
     },
     {
       size: 'sm',
       compact: false,
-      class: 'h-9 px-4',
+      class: 'h-9 px-4'
     },
     {
       size: 'medium',
       compact: true,
-      class: 'leading-7 py-0.25 px-2',
+      class: 'leading-7 py-0.25 px-2'
     },
     {
       size: 'medium',
       compact: false,
-      class: 'h-10 px-5',
+      class: 'h-10 px-5'
     },
     {
       size: 'lg',
       compact: true,
-      class: 'leading-8 py-0.25 px-3',
+      class: 'leading-8 py-0.25 px-3'
     },
     {
       size: 'lg',
       compact: false,
-      class: 'h-12 px-7',
+      class: 'h-12 px-7'
     },
     {
       size: 'xl',
       compact: true,
-      class: 'h-10 px-3',
+      class: 'h-10 px-3'
     },
     {
       size: 'xl',
       compact: false,
-      class: 'h-15 px-8',
-    },
+      class: 'h-15 px-8'
+    }
   ],
   defaultVariants: {
     variant: 'default',
     size: 'medium',
-    compact: false,
-  },
+    compact: false
+  }
 })
