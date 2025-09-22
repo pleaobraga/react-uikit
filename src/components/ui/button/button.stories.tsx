@@ -28,7 +28,10 @@ const meta = {
     },
     size: {
       control: { type: 'select' },
-      options: ['xs', 'sm', 'base', 'lg', 'xl', 'icon'] as ButtonSize[],
+      options: ['xs', 'sm', 'medium', 'lg', 'xl', 'icon'] as ButtonSize[],
+    },
+    compact: {
+      control: { type: 'boolean' },
     },
     disabled: { control: 'boolean' },
   },
@@ -56,7 +59,7 @@ export const Small: Story = {
 export const Base: Story = {
   args: {
     variant: 'default',
-    size: 'base',
+    size: 'medium',
   },
 }
 
