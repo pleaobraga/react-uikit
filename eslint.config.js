@@ -30,6 +30,7 @@ export default tseslint.config(
         globals: globals.browser
       },
       rules: {
+        semi: ['error', 'never'],
         '@typescript-eslint/no-unused-vars': [
           'warn',
           { vars: 'all', args: 'after-used', ignoreRestSiblings: true }

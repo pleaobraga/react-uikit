@@ -2,6 +2,23 @@
   "name": "react-uikit",
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./theme.css": "./dist/theme.css"
+  },
   "author": {
     "name": "pleaobraga",
     "url": "https://pleaobraga.com/"
@@ -12,11 +29,11 @@
   },
   "scripts": {
     "prepare": "husky",
-    "dev": "vite",
+    "storybook": "storybook dev -p 9009",
+    "dev": "pnpm run storybook",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 9009",
     "build-storybook": "storybook build",
     "test": "vitest",
     "coverage": "vitest run --coverage"
@@ -66,5 +83,10 @@
     "typescript-eslint": "^8.35.1",
     "vite": "^7.0.4",
     "vitest": "^3.2.4"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "tailwindcss": ">=4"
   }
 }
