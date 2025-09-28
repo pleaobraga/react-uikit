@@ -20,11 +20,10 @@ const meta = {
       control: { type: 'select' },
       options: [
         'default',
-        'destructive',
+        'filled',
+        'light',
         'outline',
-        'secondary',
-        'ghost',
-        'link'
+        'subtle'
       ] as IconButtonVariant[]
     },
     size: {
@@ -77,6 +76,38 @@ export const Large: Story = {
 export const ExtraLarge: Story = {
   args: {
     size: 'xl'
+  }
+}
+
+export const FilledButtonProps: Story = {
+  args: {
+    variant: 'filled',
+    size: 'xl',
+    className: 'bg-blue-6 hover:bg-blue-6/80'
+  }
+}
+
+export const OutlineButtonProps: Story = {
+  args: {
+    variant: 'outline',
+    size: 'xl',
+    className: 'text-blue-6 hover:bg-blue-1 border-blue-6 '
+  }
+}
+
+export const LightButtonProps: Story = {
+  args: {
+    variant: 'light',
+    size: 'xl',
+    className: 'text-blue-6 hover:bg-blue-2 bg-blue-1'
+  }
+}
+
+export const SubtleButtonProps: Story = {
+  args: {
+    variant: 'subtle',
+    size: 'xl',
+    className: 'text-blue-6 hover:bg-blue-2'
   }
 }
 

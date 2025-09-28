@@ -20,7 +20,7 @@ function IconButton({
   return (
     <Comp
       data-slot="button"
-      className={cn(iconButtonVariants({ variant, size, className }))}
+      className={cn(iconButtonVariants({ variant, size }), className)}
       {...props}
     >
       <Icon size={size}>{icon}</Icon>

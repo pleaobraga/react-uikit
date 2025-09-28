@@ -16,9 +16,10 @@ export const buttonVariants = tv({
     variant: {
       filled: 'bg-primary text-white hover:bg-primary/90',
       light: 'text-primary bg-primary/10 hover:bg-primary/20',
-      outline: 'bg-white border border-primary text-primary hover:bg-white/20',
+      outline:
+        'bg-white border-2 border-primary text-primary hover:bg-white/20',
       subtle: 'bg-transparent text-primary hover:bg-primary/10',
-      default: 'border border-gray-4 bg-white text-black hover:bg-gray-1'
+      default: 'border-2 border-gray-4 bg-white text-black hover:bg-gray-1'
     },
     size: {
       xs: 'text-xs gap-2',
