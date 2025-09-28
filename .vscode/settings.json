@@ -1,13 +1,11 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "always",
-    "source.sortImports": "explicit"
+    "source.organizeImports": "never", // <- changed
+    "source.sortImports": "never" // <- changed
   },
-
   "eslint.format.enable": false,
   "prettier.requireConfig": true
 }

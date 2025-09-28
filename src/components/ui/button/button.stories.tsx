@@ -1,4 +1,3 @@
-
 import { fn } from 'storybook/test'
 
 import { Button } from './'
@@ -6,7 +5,6 @@ import { Button } from './'
 import type { ButtonSize, ButtonVariant } from './button.type'
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: 'Example/Button',
   component: Button,
@@ -32,16 +30,14 @@ const meta = {
       options: ['xs', 'sm', 'medium', 'lg', 'xl', 'icon'] as ButtonSize[]
     },
     compact: {
-      control: { type: 'boolean' }
+      control: { type: 'boolean', defaultValue: false }
     },
-    disabled: { control: 'boolean' }
+    disabled: { control: 'boolean', defaultValue: false }
   }
 } satisfies Meta<typeof Button>
 
 export default meta
 type Story = StoryObj<typeof meta>
-
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 
 export const ExtraSmall: Story = {
   args: {
