@@ -1,19 +1,20 @@
-import { FaPlus } from 'react-icons/fa6'
+import { FaPlus, FaDownload } from 'react-icons/fa6'
 import { fn } from 'storybook/test'
 
-import { Button } from './'
+import { IconButton } from '.'
 
-import type { ButtonSize, ButtonVariant } from './button.type'
+import type { IconButtonSize, IconButtonVariant } from './icon-button.type'
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
 const meta = {
-  title: 'Example/Button',
-  component: Button,
+  title: 'Example/IconButton',
+  component: IconButton,
   parameters: {
-    layout: 'centered'
+    layout: 'centered',
+    controls: { exclude: ['children'] } // optional extra safeguard
   },
   tags: ['autodocs'],
-  args: { onClick: fn(), children: 'Button' },
+  args: { onClick: fn() },
   argTypes: {
     variant: {
       control: { type: 'select' },
@@ -24,34 +25,27 @@ const meta = {
         'secondary',
         'ghost',
         'link'
-      ] as ButtonVariant[]
+      ] as IconButtonVariant[]
     },
     size: {
       control: { type: 'select' },
-      options: ['xs', 'sm', 'medium', 'lg', 'xl'] as ButtonSize[]
-    },
-    compact: {
-      control: { type: 'boolean', defaultValue: false }
+      options: ['xs', 'sm', 'medium', 'lg', 'xl'] as IconButtonSize[]
     },
     disabled: { control: 'boolean', defaultValue: false },
-    leftIcon: {
-      control: { type: 'select', labels: { none: '— none —', plus: 'FaPlus' } },
-      options: ['none', 'plus'],
+    children: { control: false },
+    icon: {
+      control: {
+        type: 'select',
+        labels: { plus: 'FaPlus', download: 'FaDownload' }
+      },
+      options: ['plus', 'download'],
       mapping: {
-        none: undefined,
-        plus: <FaPlus />
-      }
-    },
-    rightIcon: {
-      control: { type: 'select', labels: { none: '— none —', plus: 'FaPlus' } },
-      options: ['none', 'plus'],
-      mapping: {
-        none: undefined,
-        plus: <FaPlus />
+        plus: <FaPlus />,
+        download: <FaDownload />
       }
     }
   }
-} satisfies Meta<typeof Button>
+} satisfies Meta<typeof IconButton>
 
 export default meta
 type Story = StoryObj<typeof meta>
@@ -59,35 +53,40 @@ type Story = StoryObj<typeof meta>
 export const ExtraSmall: Story = {
   args: {
     variant: 'default',
-    size: 'xs'
+    size: 'xs',
+    icon: 'plus'
   }
 }
 
 export const Small: Story = {
   args: {
     variant: 'default',
-    size: 'sm'
+    size: 'sm',
+    icon: 'plus'
   }
 }
 
 export const Base: Story = {
   args: {
     variant: 'default',
-    size: 'medium'
+    size: 'medium',
+    icon: 'plus'
   }
 }
 
 export const Large: Story = {
   args: {
     variant: 'default',
-    size: 'lg'
+    size: 'lg',
+    icon: 'plus'
   }
 }
 
 export const ExtraLarge: Story = {
   args: {
     variant: 'default',
-    size: 'xl'
+    size: 'xl',
+    icon: 'plus'
   }
 }
 
@@ -95,6 +94,7 @@ export const Disabled: Story = {
   args: {
     variant: 'default',
     size: 'lg',
+    icon: 'plus',
     disabled: true
   }
 }

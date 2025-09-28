@@ -8,4 +8,6 @@ export type ButtonCompact = VariantProps<typeof buttonVariants>['compact']
 export type ButtonType = React.ComponentProps<'button'> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
+    leftIcon?: React.ReactNode
+    rightIcon?: React.ReactNode
   }

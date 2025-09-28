@@ -1,6 +1,7 @@
 import { Slot } from '@radix-ui/react-slot'
 
 import { buttonVariants } from './button.styles'
+import { Icon } from '../icon'
 
 import type { ButtonType } from './button.type'
 
@@ -12,6 +13,8 @@ function Button({
   size,
   compact,
   asChild = false,
+  leftIcon,
+  rightIcon,
   ...props
 }: ButtonType) {
   const Comp = asChild ? Slot : 'button'
@@ -21,7 +24,11 @@ function Button({
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className, compact }))}
       {...props}
-    />
+    >
+      {leftIcon && <Icon size={size}>{leftIcon}</Icon>}
+      {props.children}
+      {rightIcon && <Icon size={size}>{rightIcon}</Icon>}
+    </Comp>
   )
 }
 

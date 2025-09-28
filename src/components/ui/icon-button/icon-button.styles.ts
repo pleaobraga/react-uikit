@@ -2,10 +2,10 @@ import { tv } from 'tailwind-variants'
 
 import { cn } from '@/lib/utils'
 
-export const buttonVariants = tv({
+export const iconButtonVariants = tv({
   base: cn(
     'inline-flex items-center justify-center',
-    'whitespace-nowrap rounded-sm',
+    'rounded-xs',
     'transition-all disabled:pointer-events-none disabled:opacity-50',
     "[&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0",
     'outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]',
@@ -27,72 +27,15 @@ export const buttonVariants = tv({
       link: 'text-primary underline-offset-4 hover:underline'
     },
     size: {
-      xs: 'text-xs gap-2',
-      sm: 'text-sm gap-3',
-      medium: 'text-base gap-3',
-      lg: 'text-lg gap-4',
-      xl: 'text-xl gap-4'
-    },
-    compact: {
-      true: '',
-      false: ''
+      xs: 'p-1 ',
+      sm: 'p-1',
+      medium: 'p-1',
+      lg: 'p-1',
+      xl: 'p-1'
     }
   },
-  compoundVariants: [
-    {
-      size: 'xs',
-      compact: true,
-      class: 'h-5 px-2'
-    },
-    {
-      size: 'xs',
-      compact: false,
-      class: 'h-7 px-3'
-    },
-    {
-      size: 'sm',
-      compact: true,
-      class: 'h-7 px-2'
-    },
-    {
-      size: 'sm',
-      compact: false,
-      class: 'h-9 px-4'
-    },
-    {
-      size: 'medium',
-      compact: true,
-      class: 'h-7 px-2'
-    },
-    {
-      size: 'medium',
-      compact: false,
-      class: 'h-10 px-5'
-    },
-    {
-      size: 'lg',
-      compact: true,
-      class: 'h-8 px-3'
-    },
-    {
-      size: 'lg',
-      compact: false,
-      class: 'h-12 px-7'
-    },
-    {
-      size: 'xl',
-      compact: true,
-      class: 'h-10 px-3'
-    },
-    {
-      size: 'xl',
-      compact: false,
-      class: 'h-15 px-8'
-    }
-  ],
   defaultVariants: {
     variant: 'default',
-    size: 'medium',
-    compact: false
+    size: 'medium'
   }
 })
