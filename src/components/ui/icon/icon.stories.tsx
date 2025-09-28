@@ -10,7 +10,7 @@ const meta = {
   component: Icon,
   parameters: {
     layout: 'centered',
-    controls: { exclude: ['children'] } // optional extra safeguard
+    controls: { exclude: ['children'] }
   },
   tags: ['autodocs'],
   argTypes: {
@@ -18,7 +18,7 @@ const meta = {
       control: { type: 'select' },
       options: ['xs', 'sm', 'medium', 'lg', 'xl'] as IconSize[]
     },
-    children: { control: false } // prevent serialization
+    children: { control: false }
   }
 } satisfies Meta<typeof Icon>
 

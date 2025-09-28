@@ -14,7 +14,7 @@ const meta = {
     controls: { exclude: ['children'] } // optional extra safeguard
   },
   tags: ['autodocs'],
-  args: { onClick: fn() },
+  args: { onClick: fn(), icon: 'plus', variant: 'default' },
   argTypes: {
     variant: {
       control: { type: 'select' },
@@ -52,49 +52,37 @@ type Story = StoryObj<typeof meta>
 
 export const ExtraSmall: Story = {
   args: {
-    variant: 'default',
-    size: 'xs',
-    icon: 'plus'
+    size: 'xs'
   }
 }
 
 export const Small: Story = {
   args: {
-    variant: 'default',
-    size: 'sm',
-    icon: 'plus'
+    size: 'sm'
   }
 }
 
 export const Base: Story = {
   args: {
-    variant: 'default',
-    size: 'medium',
-    icon: 'plus'
+    size: 'medium'
   }
 }
 
 export const Large: Story = {
   args: {
-    variant: 'default',
-    size: 'lg',
-    icon: 'plus'
+    size: 'lg'
   }
 }
 
 export const ExtraLarge: Story = {
   args: {
-    variant: 'default',
-    size: 'xl',
-    icon: 'plus'
+    size: 'xl'
   }
 }
 
 export const Disabled: Story = {
   args: {
-    variant: 'default',
     size: 'lg',
-    icon: 'plus',
     disabled: true
   }
 }
