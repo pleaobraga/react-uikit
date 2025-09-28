@@ -5,8 +5,8 @@ import { cn } from '@/lib/utils'
 export const buttonVariants = tv({
   base: cn(
     'inline-flex items-center justify-center',
-    'whitespace-nowrap rounded-sm',
-    'transition-all disabled:pointer-events-none disabled:opacity-50',
+    'whitespace-nowrap rounded-sm transition-all',
+    'disabled:pointer-events-none disabled:bg-gray-2 disabled:text-gray-5',
     "[&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0",
     'outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]',
     'aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive',
@@ -14,17 +14,11 @@ export const buttonVariants = tv({
   ),
   variants: {
     variant: {
-      default:
-        'bg-primary text-primary-foreground shadow-xs hover:bg-primary/90',
-      destructive:
-        'bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
-      outline:
-        'border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50',
-      secondary:
-        'bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80',
-      ghost:
-        'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
-      link: 'text-primary underline-offset-4 hover:underline'
+      filled: 'bg-primary text-white hover:bg-primary/90',
+      light: 'text-primary bg-primary/10 hover:bg-primary/20',
+      outline: 'bg-white border border-primary text-primary hover:bg-white/20',
+      subtle: 'bg-transparent text-primary hover:bg-primary/10',
+      default: 'border border-gray-4 bg-white text-black hover:bg-gray-1'
     },
     size: {
       xs: 'text-xs gap-2',

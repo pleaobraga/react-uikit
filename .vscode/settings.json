@@ -3,8 +3,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never", // <- changed
-    "source.sortImports": "never" // <- changed
+    "source.organizeImports": "never",
+    "source.sortImports": "never"
   },
   "eslint.format.enable": false,
   "prettier.requireConfig": true
