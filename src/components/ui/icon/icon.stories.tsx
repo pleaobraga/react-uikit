@@ -9,10 +9,10 @@ const meta = {
   title: 'Example/Icon',
   component: Icon,
   parameters: {
-    layout: 'centered',
-    controls: { exclude: ['children'] }
+    layout: 'centered'
   },
   tags: ['autodocs'],
+  args: { children: <FaPlus /> },
   argTypes: {
     size: {
       control: { type: 'select' },
@@ -28,54 +28,29 @@ type Story = StoryObj<typeof meta>
 export const ExtraSmall: Story = {
   args: {
     size: 'xs'
-  },
-  render: (args) => (
-    <Icon {...args}>
-      <FaPlus />
-    </Icon>
-  )
+  }
 }
 
 export const Small: Story = {
   args: {
     size: 'sm'
-  },
-  render: (args) => (
-    <Icon {...args}>
-      <FaPlus />
-    </Icon>
-  )
+  }
 }
 
 export const Base: Story = {
   args: {
     size: 'medium'
-  },
-  render: (args) => (
-    <Icon {...args}>
-      <FaPlus />
-    </Icon>
-  )
+  }
 }
 
 export const Large: Story = {
   args: {
     size: 'lg'
-  },
-  render: (args) => (
-    <Icon {...args}>
-      <FaPlus />
-    </Icon>
-  )
+  }
 }
 
 export const ExtraLarge: Story = {
   args: {
     size: 'xl'
-  },
-  render: (args) => (
-    <Icon {...args}>
-      <FaPlus />
-    </Icon>
-  )
+  }
 }
