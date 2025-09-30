@@ -19,15 +19,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'pnpm'
+
+      # Install pnpm (your version)
       - uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 10.14.0
+
+      # Install Node (your version) with pnpm cache
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.18.0
+          cache: 'pnpm'
+
+      # Install dependencies + build Storybook
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build-storybook
+
+      # Upload static Storybook for GitHub Pages
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./storybook-static
