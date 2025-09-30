@@ -111,7 +111,7 @@ export const LightButtonProps: Story = {
   args: {
     variant: 'light',
     size: 'xl',
-    className: 'text-blue-6 hover:bg-blue-2 bg-blue-1'
+    className: 'text-blue-6 hover:bg-blue-1 bg-blue-0'
   }
 }
 
@@ -119,7 +119,7 @@ export const SubtleButtonProps: Story = {
   args: {
     variant: 'subtle',
     size: 'xl',
-    className: 'text-blue-6 hover:bg-blue-2'
+    className: 'text-blue-6 hover:bg-blue-1'
   }
 }
 
