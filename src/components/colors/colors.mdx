@@ -1,0 +1,15 @@
+import { Meta, Title, Description, Canvas } from '@storybook/addon-docs/blocks'
+import * as Stories from './colors.stories'
+
+<Meta of={Stories} title="Foundation/Colors" />
+
+<Title>Foundation / Colors</Title>
+
+<Description>
+  A gallery of all brand palettes rendered via the <code>AllPalettes</code>{' '}
+  story. This page is MDX-only; stories live in CSF and are referenced here.
+</Description>
+
+## All palettes
+
+<Canvas of={Stories.AllPalettes} />
