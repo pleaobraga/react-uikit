@@ -14,8 +14,11 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {}
   },
-  viteFinal: async (config) => {
-    return { ...config, base: '/react-uikit/' }
+  viteFinal: async (config, { configType }) => {
+    if (configType === 'PRODUCTION' && process.env.STORYBOOK_BASE) {
+      return { ...config, base: process.env.STORYBOOK_BASE }
+    }
+    return config
   }
 }
 export default config

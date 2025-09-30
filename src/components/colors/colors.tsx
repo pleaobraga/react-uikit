@@ -7,13 +7,13 @@ function Colors({ title, colors }: Props) {
   return (
     <div className="flex flex-col gap-2 ">
       <h1 className="text-xl font-bold ">{title}</h1>
-      <div className="grid grid-cols-10 w-full h-20">
+      <div className="grid auto-cols-fr grid-flow-col w-full h-20">
         {colors.map((color) => (
           <div
             key={color.name}
             className={`${color.className} relative justify-center items-center`}
           >
-            <span className="absolute bottom-[-35px] left-4">{color.name}</span>
+            <span className="absolute bottom-[-35px] ">{color.name}</span>
           </div>
         ))}
       </div>
